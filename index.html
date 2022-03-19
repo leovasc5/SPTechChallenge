@@ -20,25 +20,25 @@
         <h1>ESCOLHA SEU PERSONAGEM</h1>
 
         <div class="columns">
-            <div class="cardBox" onclick="choose(0)">
+            <div class="cardBox" onclick="choose(0), playSelect()">
             </div>
 
-            <div class="cardBox" onclick="choose(1)">
+            <div class="cardBox" onclick="choose(1), playSelect()">
             </div>
             
-            <div class="cardBox" onclick="choose(2)">
+            <div class="cardBox" onclick="choose(2), playSelect()">
             </div>
 
-            <div class="cardBox" onclick="choose(3)">
+            <div class="cardBox" onclick="choose(3), playSelect()">
             </div>
 
-            <div class="cardBox" onclick="choose(4)">
+            <div class="cardBox" onclick="choose(4), playSelect()">
             </div>
 
-            <div class="cardBox" onclick="choose(5)">
+            <div class="cardBox" onclick="choose(5), playSelect()">
             </div>
 
-            <div class="cardBox" onclick="choose(6)">
+            <div class="cardBox" onclick="choose(6), playSelect()">
             </div>
         </div>
     </div>
@@ -52,8 +52,8 @@
         <div class="askConfirm">
             <h1 class="ask">COMEÇAR O JOGO?</h1>
             <div id="askButtons">
-                <button id="frstBttn" onclick="document.location.reload(true)">ESCOLHER OUTRO</button>
-                <button id="scndBttn" onclick="start()">SIM</button>
+                <button id="frstBttn" onclick="playError(), choiceOther()">ESCOLHER OUTRO</button>
+                <button id="scndBttn" onclick="start(), playConfirm()">SIM</button>
             </div>
         </div>
     </div>

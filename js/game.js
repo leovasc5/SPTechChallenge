@@ -5,6 +5,11 @@ function choose(obj){
     characterSelected.innerHTML = `VOCÊ ESCOLHEU: "${(characters[obj]['nome']).toUpperCase()}"`
 }
 
+function choiceOther(){
+    cardsBox.style.display = "block";
+    startGame.style.display = "none";
+}
+
 function start(){
     startGame.style.display = "None";
 }

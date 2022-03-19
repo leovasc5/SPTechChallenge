@@ -90,36 +90,78 @@ const q11 = {
 
 const q12 = {
     mat: materias[2],
-    desc: "O que o comando 'git config user.name' executa?",
-    resp: "Mostra o user.name configurado no git",
-    options: ["Deleta o user.name do git", "Gera um erro pois falta o comando '--global'"],
+    desc: "O que o comando 'git status' executa?",
+    resp: "Mostra os arquivos adicionados e não adicionados ao Git",
+    options: ["Mostra os arquivos não adicionados ao Git", "Mostra os arquivos adicionados ao Git", "Mostra se o repositório está online ou não"],
     level: 2
 }
 
 const q13 = {
     mat: materias[2],
-    desc: "O que o comando 'git add .'",
-    resp: "Disparará o código em JavaScript que está dentro dos parênteses",
-    options: ["Disparará uma código em HTML para interagir com o usuário", "Disparará um alert vazio"],
+    desc: "O que o comando 'git config user.name' executa?",
+    resp: "Mostra o user.name configurado no git",
+    options: ["Deleta o user.name do git", "Gera um erro pois falta o comando '--global'"],
     level: 3
 }
 
 const q14 = {
     mat: materias[2],
-    desc: "Qual código abaixo é um exemplo de interpolação? Considere a variável 'primeira_parte' = 'Olá'",
-    resp: "var frase = `${primeira_parte}, Mundo!`",
-    options: ["var frase = '${primeira_parte}, Mundo!'", "var frase = 'primeira_parte Mundo!'", "var frase = ${`primeira_parte , Mundo!`}", "var frase = 'Olá,' + 'Mundo!'"],
+    desc: "O que o comando 'git add .' executa?",
+    resp: "Insere todos os arquivos não adicionados ao Git",
+    options: ["Insere o primeiro arquivo não adicionado em ordem alfabética ao Git", "Adiciona o arquivo mais recente não adicionado ao Git"],
     level: 4
 }
 
 const q15 = {
     mat: materias[2],
-    desc: "Se uma variável não está definida no escopo global, apenas local, o que acontecerá com o script ao tentar usar essa variável numa outra função?",
-    resp: "Ele não irá capturar o valor da variável e um erro será apresentado",
-    options: ["Nada pois o escopo local criará a variável novamente", "Não acontece nada, escopos não interferem nesses casos", "Não é possível criar variáveis globais"],
+    desc: `O que o comando "git commit -m '...mensagem...'" executa?`,
+    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
+    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
     level: 5
 }
 
+const q16 = {
+    mat: materias[3],
+    desc: "O que é o 'escopo' em um projeto de TI?",
+    resp: "Escopo determina e documenta os objetivos específicos de cada projeto, como suas entregas, tarefas, custos e prazos. Além disso, a documentação do escopo explica os limites de um projeto",
+    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    level: 2
+}
+
+const q17 = {
+    mat: materias[3],
+    desc: "O que é o 'backlog' em um projeto de TI?",
+    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
+    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    level: 2
+}
+
+const q18 = {
+    mat: materias[3],
+    desc: "O que são as 'premissas' em um projeto de TI?",
+    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
+    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    level: 2
+}
+
+const q19 = {
+    mat: materias[3],
+    desc: "O que são as 'restrições' em um projeto de TI?",
+    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
+    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    level: 2
+}
+
+const q20 = {
+    mat: materias[3],
+    desc: "O que o comando 'git commit -m '...mensagem...'' executa?",
+    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
+    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    level: 2
+}
+
+
+
 function getQuestions(){
-    return [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
+    return [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15];
 }
