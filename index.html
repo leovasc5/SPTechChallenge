@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="shortcut icon" href="https://www.sptech.school/assets/images/favicons/favicon_01.png"/>
+    <title>SPTech Challenge</title>
+</head>
+<body>
+    <div class="head">
+        <h1>SPTech Challenge</h1>
+        <span>Jogue com os seus professores preferidos!</span>
+    </div>
+
+    <div class="cardsBox" id="cardsBox">
+        <h1>ESCOLHA SEU PERSONAGEM</h1>
+
+        <div class="columns">
+            <div class="cardBox" onclick="choose(0)">
+            </div>
+
+            <div class="cardBox" onclick="choose(1)">
+            </div>
+            
+            <div class="cardBox" onclick="choose(2)">
+            </div>
+
+            <div class="cardBox" onclick="choose(3)">
+            </div>
+
+            <div class="cardBox" onclick="choose(4)">
+            </div>
+
+            <div class="cardBox" onclick="choose(5)">
+            </div>
+
+            <div class="cardBox" onclick="choose(6)">
+            </div>
+        </div>
+    </div>
+    
+    <div class="startGame" id="startGame" style="display: none">
+        <div id="characterConfirm" class="characterConfirm">
+            <img id="characterPhoto">
+            <h1 class="characterSelected" id="characterSelected"></h1>
+        </div>
+        
+        <div class="askConfirm">
+            <h1 class="ask">COMEÇAR O JOGO?</h1>
+            <div id="askButtons">
+                <button id="frstBttn" onclick="document.location.reload(true)">ESCOLHER OUTRO</button>
+                <button id="scndBttn" onclick="start()">SIM</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="js/characters.js"></script>
+<script src="js/game.js"></script>
+<script src="js/index.js"></script>
