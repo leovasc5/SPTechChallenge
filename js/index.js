@@ -1,6 +1,7 @@
 const characters = getCharacters();
 const keys = Object.keys(characters);
 const divs = document.getElementsByClassName("cardBox");
+const character = {};
 
 keys.forEach((key, index) => {
     console.log(`${index}: ${characters[key]['nome']}`);
@@ -45,18 +46,3 @@ keys.forEach((key, index) => {
     divs[key].appendChild(newHabTitle);
     divs[key].appendChild(newUL);
 });
-
-function playSelect(){
-    selectAudio = new Audio('assets/audios/select.wav');
-    selectAudio.play();
-}
-
-function playConfirm(){
-    confirmAudio = new Audio('assets/audios/confirm.wav');
-    confirmAudio.play();
-}
-
-function playError(){
-    errorAudio = new Audio('assets/audios/error.wav');
-    errorAudio.play();
-}
