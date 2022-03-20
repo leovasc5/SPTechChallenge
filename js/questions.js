@@ -123,45 +123,83 @@ const q15 = {
 const q16 = {
     mat: materias[3],
     desc: "O que é o 'escopo' em um projeto de TI?",
-    resp: "Escopo determina e documenta os objetivos específicos de cada projeto, como suas entregas, tarefas, custos e prazos. Além disso, a documentação do escopo explica os limites de um projeto",
-    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    resp: "Escopo determina e documenta os objetivos específicos de cada projeto, como suas entregas, tarefas, custos e prazos",
+    options: ["Escopo determina e documenta quais são as necessidades imutáveis do projeto", "Escopo determina e documenta quais são os limites que não comprometam o desempenho e desenvolvimento do projeto"],
     level: 2
 }
 
 const q17 = {
     mat: materias[3],
     desc: "O que é o 'backlog' em um projeto de TI?",
-    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
-    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    resp: "Backlog é a 'lista' de tarefas que devem ser concluídas no projeto",
+    options: ["Backlog é a teoria que define como deve ser organizado um projeto de TI", "Backlog é a 'lista' de bugs e problemas encontrados no projeto"],
     level: 2
 }
 
 const q18 = {
     mat: materias[3],
     desc: "O que são as 'premissas' em um projeto de TI?",
-    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
-    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    resp: "Premissas determinam e documentam quais são as necessidades imutáveis do projeto",
+    options: ["Premissas determinam e documentam os objetivos específicos de cada projeto, como suas entregas, tarefas, custos e prazos", "Premissas determinam e documentam quais são os limites que não comprometam o desempenho e desenvolvimento do projeto"],
     level: 2
 }
 
 const q19 = {
     mat: materias[3],
     desc: "O que são as 'restrições' em um projeto de TI?",
-    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
-    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    resp: "Restrições determinam e documentam quais são os limites que não comprometam o desempenho e desenvolvimento do projeto",
+    options: ["Restrições determinam e documentam os objetivos específicos de cada projeto, como suas entregas, tarefas, custos e prazos", "Restrições determinam e documentam quais são as necessidades imutáveis do projeto"],
     level: 2
 }
 
 const q20 = {
     mat: materias[3],
-    desc: "O que o comando 'git commit -m '...mensagem...'' executa?",
-    resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
-    options: ["Atualiza o repositório remoto e local", "Inicia um novo repositório"],
+    desc: "O que é SCRUM?",
+    resp: "Uma metodologia de desenvolvimento de projetos",
+    options: ["Uma jogada tática do futebol", "Um paradigma de programação"],
     level: 2
 }
 
+const q21 = {
+    mat: materias[4],
+    desc: "O que é SQL?",
+    resp: "Uma linguagem para manipulação de registros de dados",
+    options: ["Uma linguagem de programação para sistemas operacionais", "Um sistema gerenciador de banco de dados"],
+    level: 1
+}
 
+const q22 = {
+    mat: materias[4],
+    desc: "O que o termo 'SELECT' executa no SQL?",
+    resp: "SELECT executa uma consulta aos registros no banco de dados",
+    options: ["SELECT executa uma atualização aos registros no banco de dados", "SELECT executa uma inserção no banco de dados"],
+    level: 2
+}
+
+const q23 = {
+    mat: materias[4],
+    desc: "O que o comando 'SELECT nome FROM Alunos WHERE idade < 18' retornará?",
+    resp: "Os nomes de todos os alunos menores que 18 anos",
+    options: ["Os dados de todos os alunos menores que 18 anos", "A idade de todos alunos menores que 18 anos"],
+    level: 3
+}
+
+const q24 = {
+    mat: materias[4],
+    desc: "Para que serve uma chave estrangeira?",
+    resp: "Para relacionar uma tabela a outra sem a necessidade de repetir a inserção dos dados",
+    options: ["Para clonar duas tabelas para que tenham os mesmos dados", "Para inserir dados duplicados de tabelas diferentes"],
+    level: 4
+}
+
+const q25 = {
+    mat: materias[4],
+    desc: "O que o comando 'ALTER TABLE Alunos ADD email VARCHAR(128) NOT NULL' executará?",
+    resp: "A adição do campo de texto 'email' que não pode ser nulo",
+    options: ["A adição de um campo de texto 'email' que pode ser nulo", "A adição de emails aleatórios em todos os registros da tabela Alunos"],
+    level: 5
+}
 
 function getQuestions(){
-    return [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15];
+    return [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25];
 }
