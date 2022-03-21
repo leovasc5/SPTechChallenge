@@ -17,7 +17,7 @@ function choiceOther(){
 }
 
 var timerOn = true;
-var time = 3;
+var time = 900;
 
 function fmtMSS(s){
     return(s-(s%=60))/60+(9<s?':':':0')+s
@@ -32,8 +32,6 @@ function timedCount() {
         time--;
         setTimeout(timedCount, 1000);
     }
-
-    
 }
 
 function startCount() {
@@ -42,14 +40,22 @@ function startCount() {
     }
 }
 
-function getQuestionsToGame(){
-    
+function shuffleQuestions (array){
+    for(i=(array.length-1); i>0; i--){
+        rand = Math.floor(Math.random() * (i + 1));
+        [array[i], array[rand]] = [array[rand], array[i]]
+    }
+    return array;
 }
+
+var questions = shuffleQuestions(getQuestions());
 
 function start(){
     startGame.style.display = "None";
+
     userImage.src = character.url_photo;
     userName.innerHTML = character.nome;
-    timedCount();
-}
 
+    timedCount();
+    questionScreen.style.display = "block";
+}

@@ -1,6 +1,7 @@
 const materias = ["Arquitetura Computacional", "Algoritmos", "Pesquisa & Inovação", "Tecnologia da Informação", "Banco de Dados"];
 
 const q1 = {
+    id: 1,
     mat: materias[0],
     desc: "Converta o número 10 para a base binária",
     resp: "0101",
@@ -9,6 +10,7 @@ const q1 = {
 }
 
 const q2 = {
+    id: 2,
     mat: materias[0],
     desc: "Foram ensinadas as bases...",
     resp: "Binárias, Octais, Deimais e Hexadecimais",
@@ -17,6 +19,7 @@ const q2 = {
 }
 
 const q3 = {
+    id: 3,
     mat: materias[0],
     desc: "Converta 100001 para a base decimal",
     resp: "33",
@@ -25,6 +28,7 @@ const q3 = {
 }
 
 const q4 = {
+    id: 4,
     mat: materias[0],
     desc: "Como se cria uma variável nos códigos do Arduino?",
     resp: "#define",
@@ -33,6 +37,7 @@ const q4 = {
 }
 
 const q5 = {
+    id: 5,
     mat: materias[0],
     desc: "Calcule em decimal: 100101 + 01111",
     resp: "71",
@@ -41,6 +46,7 @@ const q5 = {
 }
 
 const q6 = {
+    id: 6,
     mat: materias[1],
     desc: "Qual é o atributo que estiliza os elementos?",
     resp: "style",
@@ -49,6 +55,7 @@ const q6 = {
 }
 
 const q7 = {
+    id: 7,
     mat: materias[1],
     desc: "Propriedade do Java Script que insere código HTML no elemento.",
     resp: "innerHTML",
@@ -57,6 +64,7 @@ const q7 = {
 }
 
 const q8 = {
+    id: 8,
     mat: materias[1],
     desc: "Para que serve o evento onClick?",
     resp: "Disparará o código em JavaScript que está dentro dos parênteses",
@@ -65,6 +73,7 @@ const q8 = {
 }
 
 const q9 = {
+    id: 9,
     mat: materias[1],
     desc: "Qual código abaixo é um exemplo de interpolação? Considere a variável 'primeira_parte' = 'Olá'",
     resp: "var frase = `${primeira_parte}, Mundo!`",
@@ -73,6 +82,7 @@ const q9 = {
 }
 
 const q10 = {
+    id: 10,
     mat: materias[1],
     desc: "Se uma variável não está definida no escopo global, apenas local, o que acontecerá com o script ao tentar usar essa variável numa outra função?",
     resp: "Ele não irá capturar o valor da variável e um erro será apresentado",
@@ -81,6 +91,7 @@ const q10 = {
 }
 
 const q11 = {
+    id: 11,
     mat: materias[2],
     desc: "O que é o Git?",
     resp: "É um sistema de controle de versionamento de códigos",
@@ -89,6 +100,7 @@ const q11 = {
 }
 
 const q12 = {
+    id: 12,
     mat: materias[2],
     desc: "O que o comando 'git status' executa?",
     resp: "Mostra os arquivos adicionados e não adicionados ao Git",
@@ -97,6 +109,7 @@ const q12 = {
 }
 
 const q13 = {
+    id: 13,
     mat: materias[2],
     desc: "O que o comando 'git config user.name' executa?",
     resp: "Mostra o user.name configurado no git",
@@ -105,6 +118,7 @@ const q13 = {
 }
 
 const q14 = {
+    id: 14,
     mat: materias[2],
     desc: "O que o comando 'git add .' executa?",
     resp: "Insere todos os arquivos não adicionados ao Git",
@@ -113,6 +127,7 @@ const q14 = {
 }
 
 const q15 = {
+    id: 15,
     mat: materias[2],
     desc: `O que o comando "git commit -m '...mensagem...'" executa?`,
     resp: "Define uma espécie de marco no projeto com a descrição da mensagem",
@@ -121,6 +136,7 @@ const q15 = {
 }
 
 const q16 = {
+    id: 16,
     mat: materias[3],
     desc: "O que é o 'escopo' em um projeto de TI?",
     resp: "Escopo determina e documenta os objetivos específicos de cada projeto, como suas entregas, tarefas, custos e prazos",
@@ -129,6 +145,7 @@ const q16 = {
 }
 
 const q17 = {
+    id: 17,
     mat: materias[3],
     desc: "O que é o 'backlog' em um projeto de TI?",
     resp: "Backlog é a 'lista' de tarefas que devem ser concluídas no projeto",
@@ -137,6 +154,7 @@ const q17 = {
 }
 
 const q18 = {
+    id: 18,
     mat: materias[3],
     desc: "O que são as 'premissas' em um projeto de TI?",
     resp: "Premissas determinam e documentam quais são as necessidades imutáveis do projeto",
@@ -145,6 +163,7 @@ const q18 = {
 }
 
 const q19 = {
+    id: 19,
     mat: materias[3],
     desc: "O que são as 'restrições' em um projeto de TI?",
     resp: "Restrições determinam e documentam quais são os limites que não comprometam o desempenho e desenvolvimento do projeto",
@@ -153,6 +172,7 @@ const q19 = {
 }
 
 const q20 = {
+    id: 20,
     mat: materias[3],
     desc: "O que é SCRUM?",
     resp: "Uma metodologia de desenvolvimento de projetos",
@@ -161,6 +181,7 @@ const q20 = {
 }
 
 const q21 = {
+    id: 21,
     mat: materias[4],
     desc: "O que é SQL?",
     resp: "Uma linguagem para manipulação de registros de dados",
@@ -169,6 +190,7 @@ const q21 = {
 }
 
 const q22 = {
+    id: 22,
     mat: materias[4],
     desc: "O que o termo 'SELECT' executa no SQL?",
     resp: "SELECT executa uma consulta aos registros no banco de dados",
@@ -177,6 +199,7 @@ const q22 = {
 }
 
 const q23 = {
+    id: 23,
     mat: materias[4],
     desc: "O que o comando 'SELECT nome FROM Alunos WHERE idade < 18' retornará?",
     resp: "Os nomes de todos os alunos menores que 18 anos",
@@ -185,6 +208,7 @@ const q23 = {
 }
 
 const q24 = {
+    id: 24,
     mat: materias[4],
     desc: "Para que serve uma chave estrangeira?",
     resp: "Para relacionar uma tabela a outra sem a necessidade de repetir a inserção dos dados",
@@ -193,6 +217,7 @@ const q24 = {
 }
 
 const q25 = {
+    id: 25,
     mat: materias[4],
     desc: "O que o comando 'ALTER TABLE Alunos ADD email VARCHAR(128) NOT NULL' executará?",
     resp: "A adição do campo de texto 'email' que não pode ser nulo",
