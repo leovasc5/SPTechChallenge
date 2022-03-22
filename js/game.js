@@ -43,18 +43,23 @@ function startCount() {
 function shuffleQuestions(array){
     for(i=(array.length-1); i>0; i--){
         rand = Math.floor(Math.random() * (i + 1));
-        [array[i], array[rand]] = [array[rand], array[i]]
+        [array[i], array[rand]] = [array[rand], array[i]];
     }
+
     return array;
 }
 
 function shuffleAnswers(resp, options){
-    array = options.push(resp);
-    for(i=(array.length-1); i!=0; i--){
-        rand = Math.floor(Math.random() * (i + 1));
-        [array[i], array[rand]] = [array[rand], array[i]]
+    options.push(resp);
+
+    // console.log(array)
+    for(j=(options.length-1); j>0; j--){
+        rand = Math.floor(Math.random() * (j + 1));
+        [options[j], options[rand]] = [options[rand], options[j]];
+        
     }
-    return array;
+    
+    return options;
 }
 
 var questions = shuffleQuestions(getQuestions());
@@ -62,8 +67,13 @@ var questions = shuffleQuestions(getQuestions());
 function question(){
     newDesc = document.createElement("span");
 
-    for(i=0; i<=(questions.length-1); i++){
-        questionNow = shuffleAnswers(questions[i]['resp'], questions[i]['options']);
+    // for(i=0; i<=(questions.length-1); i++){ Correto
+    for(i=0; i<=3; i++){ //Teste
+        newDesc.textContent = questions[i]['desc'];
+        separator.appendChild(newDesc);
+        options = shuffleAnswers(questions[i]['resp'], questions[i]['options']);
+        
+        newButton = document.createElement("button");
         console.log(questionNow);
     }
     
