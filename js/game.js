@@ -56,25 +56,43 @@ function shuffleAnswers(resp, options){
     for(j=(options.length-1); j>0; j--){
         rand = Math.floor(Math.random() * (j + 1));
         [options[j], options[rand]] = [options[rand], options[j]];
-        
     }
-    
+
     return options;
 }
 
 var questions = shuffleQuestions(getQuestions());
+var pontos = 0;
+
+function reviewQuestion(element){
+    for(l=0; l<=(questions.length-1); l++){
+        if(element.id == questions[l]['id']){
+            if(questions[l]['resp'] == element.textContent){
+                element.style.backgroundColor = 'green';
+                pontos += questions[l]['level'] * 25;
+                points.innerHTML = pontos;
+            }
+        }
+    }
+}
 
 function question(){
     newDesc = document.createElement("span");
 
     // for(i=0; i<=(questions.length-1); i++){ Correto
-    for(i=0; i<=3; i++){ //Teste
+    for(i=0; i<=0; i++){ //Teste
         newDesc.textContent = questions[i]['desc'];
         separator.appendChild(newDesc);
         options = shuffleAnswers(questions[i]['resp'], questions[i]['options']);
         
-        newButton = document.createElement("button");
-        console.log(questionNow);
+        for(k=0; k<=(options.length-1); k++){
+            newButton = document.createElement("button");
+            newButton.textContent = options[k];
+            newButton.setAttribute('id', questions[i]['id']);
+            newButton.setAttribute('onclick', 'reviewQuestion(this)');
+            
+            answerButtons.appendChild(newButton);
+        }
     }
     
 }

@@ -104,7 +104,7 @@ const q12 = {
     mat: materias[2],
     desc: "O que o comando 'git status' executa?",
     resp: "Mostra os arquivos adicionados e não adicionados ao Git",
-    options: ["Mostra os arquivos não adicionados ao Git", "Mostra os arquivos adicionados ao Git", "Mostra se o repositório está online ou não"],
+    options: ["Mostra apenas os arquivos não adicionados ao Git", "Mostra apenas os arquivos adicionados ao Git", "Mostra se o repositório está online ou não"],
     level: 2
 }
 
