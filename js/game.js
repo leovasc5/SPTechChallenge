@@ -67,10 +67,14 @@ var pontos = 0;
 function reviewQuestion(element){
     for(l=0; l<=(questions.length-1); l++){
         if(element.id == questions[l]['id']){
+            element.disabled = true;
             if(questions[l]['resp'] == element.textContent){
-                element.style.backgroundColor = 'green';
+                element.style.backgroundColor = "green";
                 pontos += questions[l]['level'] * 25;
                 points.innerHTML = pontos;
+            }else{
+                element.style.backgroundColor = "red";
+                element.style.color = "#fff";
             }
         }
     }

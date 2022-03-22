@@ -8,7 +8,7 @@ const p1 = {
 const p2 = {
     nome: "Freeza",
     desc: "Professor de Algoritmos",
-    hab: ['Scripts em JS', 'Criador de Pererecas', 'Ser o Maioral'],
+    hab: ['Scripts em JS', 'Criador de Pererecas', 'Apanhar pro Goku'],
     url_photo: "https://media-exp1.licdn.com/dms/image/C4D03AQGMWoXbGWAxJw/profile-displayphoto-shrink_200_200/0/1637609695130?e=1652918400&v=beta&t=J5cQfAetwlGj2oIO1LQyzFim6gvgyzq64PD8jJHULfo"
 }
 

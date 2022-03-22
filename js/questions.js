@@ -4,7 +4,7 @@ const q1 = {
     id: 1,
     mat: materias[0],
     desc: "Converta o número 10 para a base binária",
-    resp: "0101",
+    resp: "1010",
     options: ["1011", "10", "11", "0110"],
     level: 1
 }
@@ -39,7 +39,7 @@ const q4 = {
 const q5 = {
     id: 5,
     mat: materias[0],
-    desc: "Calcule em decimal: 100101 + 01111",
+    desc: "Calcule em decimal: 101001 + 11110",
     resp: "71",
     options: ["75", "154", "38", "127"],
     level: 5
