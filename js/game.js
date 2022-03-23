@@ -65,9 +65,13 @@ var questions = shuffleQuestions(getQuestions());
 var pontos = 0;
 
 function reviewQuestion(element){
+    array_disable = document.getElementsByClassName(element.className);
+    for(m=0; m<=(array_disable.length-1); m++){
+        array_disable[m].disabled = true;
+    }
+
     for(l=0; l<=(questions.length-1); l++){
         if(element.id == questions[l]['id']){
-            element.disabled = true;
             if(questions[l]['resp'] == element.textContent){
                 element.style.backgroundColor = "green";
                 pontos += questions[l]['level'] * 25;
@@ -78,25 +82,39 @@ function reviewQuestion(element){
             }
         }
     }
+
+    questions.shift();
 }
 
 function question(){
-    newDesc = document.createElement("span");
 
-    // for(i=0; i<=(questions.length-1); i++){ Correto
-    for(i=0; i<=0; i++){ //Teste
+    for(i=0; i<=(questions.length-1); i++){ //Correto
+    // for(i=0; i<=0; i++){ //Teste
+        newDesc = document.createElement("span");
         newDesc.textContent = questions[i]['desc'];
+        if(i!=0){
+            newDesc.setAttribute('style', 'display: none');  
+            console.log(questions[i]['desc']);  
+        }
         separator.appendChild(newDesc);
+
         options = shuffleAnswers(questions[i]['resp'], questions[i]['options']);
         
         for(k=0; k<=(options.length-1); k++){
             newButton = document.createElement("button");
             newButton.textContent = options[k];
             newButton.setAttribute('id', questions[i]['id']);
+            newButton.setAttribute('class', questions[i]['id']);
             newButton.setAttribute('onclick', 'reviewQuestion(this)');
-            
+
+            if(i!=0){
+                newButton.setAttribute('style', 'display: none');           
+            }
+
             answerButtons.appendChild(newButton);
         }
+
+        
     }
     
 }
