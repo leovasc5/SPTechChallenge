@@ -78,12 +78,21 @@ function reviewQuestion(element){
                 points.innerHTML = pontos;
             }else{
                 element.style.backgroundColor = "red";
-                element.style.color = "#fff";
             }
         }
     }
 
+    questoesAntigas = document.getElementsByClassName(element.id.toString());
+    for(o=0; o<=(questoesAntigas.length-1); o++){
+        console.log("Teste");
+        questoesAntigas[o].style.display = 'none';
+    }
+    
     questions.shift();
+    novaQuestao = document.getElementsByClassName(questions[0]['id'].toString());
+    for(n=0; n<=(novaQuestao.length-1); n++){
+        novaQuestao[n].style.display = "";   
+    }
 }
 
 function question(){
@@ -92,9 +101,9 @@ function question(){
     // for(i=0; i<=0; i++){ //Teste
         newDesc = document.createElement("span");
         newDesc.textContent = questions[i]['desc'];
+        newDesc.setAttribute('class', questions[i]['id']);
         if(i!=0){
             newDesc.setAttribute('style', 'display: none');  
-            console.log(questions[i]['desc']);  
         }
         separator.appendChild(newDesc);
 
@@ -110,11 +119,8 @@ function question(){
             if(i!=0){
                 newButton.setAttribute('style', 'display: none');           
             }
-
             answerButtons.appendChild(newButton);
-        }
-
-        
+        }   
     }
     
 }
