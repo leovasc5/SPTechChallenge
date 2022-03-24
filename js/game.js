@@ -64,6 +64,15 @@ function shuffleAnswers(resp, options){
 var questions = shuffleQuestions(getQuestions());
 var pontos = 0;
 
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+  
+
 function reviewQuestion(element){
     array_disable = document.getElementsByClassName(element.className);
     for(m=0; m<=(array_disable.length-1); m++){
@@ -76,15 +85,17 @@ function reviewQuestion(element){
                 element.style.backgroundColor = "green";
                 pontos += questions[l]['level'] * 25;
                 points.innerHTML = pontos;
+                sleep(500);
             }else{
                 element.style.backgroundColor = "red";
+                sleep(500);
             }
         }
     }
+    
 
     questoesAntigas = document.getElementsByClassName(element.id.toString());
     for(o=0; o<=(questoesAntigas.length-1); o++){
-        console.log("Teste");
         questoesAntigas[o].style.display = 'none';
     }
     
@@ -93,7 +104,9 @@ function reviewQuestion(element){
     for(n=0; n<=(novaQuestao.length-1); n++){
         novaQuestao[n].style.display = "";   
     }
+    
 }
+
 
 function question(){
 
