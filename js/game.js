@@ -1,4 +1,5 @@
 function choose(obj) {
+    selectAudio.play();
     cardsBox.style.display = "none";
     startGame.style.display = "block";
     characterPhoto.src = characters[obj]['url_photo']
@@ -12,6 +13,7 @@ function choose(obj) {
 }
 
 function choiceOther() {
+    errorAudio.play();
     cardsBox.style.display = "block";
     startGame.style.display = "none";
 }
@@ -64,6 +66,7 @@ var pontos = 0;
 var questoesAntigas = [];
 
 function skipQuestion(element) {
+    selectPassAudio.play();
     questoesAntigas = document.getElementsByClassName(element.id.toString());
     for (o = 0; o <= (questoesAntigas.length - 1); o++) {
         questoesAntigas[o].style.display = 'none';
@@ -86,10 +89,12 @@ function reviewQuestion(element) {
     for (l = 0; l <= (questions.length - 1); l++) {
         if (element.id == questions[l]['id']) {
             if (questions[l]['resp'] == element.textContent) {
+                correctAudio.play()
                 element.style.backgroundColor = "green";
                 pontos += questions[l]['level'] * 25;
                 points.innerHTML = pontos;
             } else {
+                errorAudio.play();
                 element.style.backgroundColor = "red";
                 btns = document.getElementsByClassName(element.id.toString());
                 for(p = 0; p <= (btns.length - 1); p++){
@@ -143,6 +148,7 @@ function question() {
 }
 
 function start() {
+    confirmAudio.play();
     startGame.style.display = "None";
 
     userImage.src = character.url_photo;

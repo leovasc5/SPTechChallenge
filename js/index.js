@@ -4,8 +4,6 @@ const divs = document.getElementsByClassName("cardBox");
 const character = {};
 
 keys.forEach((key, index) => {
-    console.log(`${index}: ${characters[key]['nome']}`);
-
     newImg = document.createElement("img");
     newImg.src = `${characters[key]['url_photo']}`;
 
