@@ -158,3 +158,7 @@ function start() {
     questionScreen.style.display = "block";
     question();
 }
+
+// Criado por: LEONARDO VASCONCELOS PAULINO
+// GitHub: https://github.com/leovasc5/CSVtoMongoDB
+// Instagram: https://www.instagram.com/leovasc5
