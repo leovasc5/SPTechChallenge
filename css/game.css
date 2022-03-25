@@ -92,7 +92,7 @@
     text-align: center;
 }
 
-.questionScreen #answerButtons button{
+.questionScreen #answerButtons button, #continueButton button{
     font-size: 24px;
     padding: 24px;
     margin: 16px;
@@ -105,6 +105,20 @@
 .questionScreen #answerButtons button:hover{
     cursor: pointer;
     background-color: #6a7591;
+}
+
+#continueButton{
+    display: table;
+    margin: 0 auto;
+}
+
+#continueButton button:hover{
+    opacity: 0.4;
+}
+
+#continueButton button{
+    background-color: #2B6069;
+    cursor: pointer;
 }
 
 .askConfirm #frstBttn{
