@@ -19,6 +19,7 @@
     background-color: #2B6069;
     padding: 8px;
     cursor: pointer;
+    transition: all 0.1s ease-in;
 }
 
 .cardBox:hover{

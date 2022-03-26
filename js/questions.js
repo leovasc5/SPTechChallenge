@@ -66,16 +66,16 @@ const q7 = {
 const q8 = {
     id: 8,
     mat: materias[1],
-    desc: "Para que serve o evento onClick?",
-    resp: "Disparará o código em JavaScript que está dentro dos parênteses",
-    options: ["Disparará uma código em HTML para interagir com o usuário", "Disparará um alert vazio"],
+    desc: "O que o evento onClick executa?",
+    resp: "Dispara o código em JavaScript que está dentro dos parênteses",
+    options: ["Dispara uma código em HTML para interagir com o usuário", "Dispara um alert vazio"],
     level: 3
 }
 
 const q9 = {
     id: 9,
     mat: materias[1],
-    desc: "Qual código abaixo é um exemplo de interpolação? Considere a variável 'primeira_parte' = 'Olá'",
+    desc: "Qual código abaixo é um exemplo de interpolação? Considere a variável primeira_parte = 'Olá'",
     resp: "var frase = `${primeira_parte}, Mundo!`",
     options: ["var frase = '${primeira_parte}, Mundo!'", "var frase = 'primeira_parte Mundo!'", "var frase = ${`primeira_parte , Mundo!`}", "var frase = 'Olá,' + 'Mundo!'"],
     level: 4

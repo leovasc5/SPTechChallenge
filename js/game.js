@@ -114,10 +114,16 @@ function question() {
         newDesc = document.createElement("span");
         newDesc.textContent = questions[i]['desc'];
         newDesc.setAttribute('class', questions[i]['id']);
+
+        newMateria = document.createElement('p');
+        newMateria.setAttribute('class', questions[i]['id']);
+        newMateria.textContent = questions[i]['mat'];
         if (i != 0) {
             newDesc.setAttribute('style', 'display: none');
+            newMateria.setAttribute('style', 'display: none');
         }
         separator.appendChild(newDesc);
+        separator.appendChild(newMateria);
 
         options = shuffleAnswers(questions[i]['resp'], questions[i]['options']);
 
@@ -138,7 +144,7 @@ function question() {
         newButtonContinue.setAttribute('class', questions[i]['id']);
         newButtonContinue.setAttribute('onclick', 'skipQuestion(this)');
         newButtonContinue.setAttribute('disabled', 'true');
-        newButtonContinue.textContent = "Continuar";
+        newButtonContinue.textContent = "CONTINUAR";
 
         if(i != 0){
             newButtonContinue.setAttribute('style', 'display: none');

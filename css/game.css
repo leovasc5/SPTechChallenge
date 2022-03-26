@@ -16,7 +16,7 @@
     margin: 0 auto;
     padding: 32px;
     width: 128px;
-    border-radius: 24px;
+    border-radius: 48px;
 }
 
 .askConfirm{
@@ -38,6 +38,7 @@
     border: none;
     border-radius: 16px;
     cursor: pointer;
+    transition: all 0.1s ease-in;
 }
 
 .questionScreen{
@@ -100,6 +101,13 @@
     border: none;
     background-color: #3c4864;
     border-radius: 48px;
+    transition: all 0.1s ease-in;
+}
+
+#separator p{
+    color: #3aa8bb;
+    font-size: 24px;
+    padding-top: 16px;
 }
 
 .questionScreen #answerButtons button:hover{
