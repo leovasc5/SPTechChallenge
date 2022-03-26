@@ -18,6 +18,28 @@ function choiceOther() {
     startGame.style.display = "none";
 }
 
+function finishGame(status) {
+    finishAudio.play();
+    questionScreen.style.display = "none";
+    newFinishAlert = document.createElement('span');
+    newFinishAlert.setAttribute('class', 'finishAlert');
+    if (status == 0) {
+        newFinishAlert.setAttribute('style', 'color: #FF2E2E');
+        newFinishAlert.textContent = "TEMPO ESGOTADO!";
+    } else {
+        newFinishAlert.setAttribute('style', 'color: #5CFF5C');
+        newFinishAlert.textContent = "QUESTÕES FINALIZADAS!";
+    }
+
+    newButtonFinish = document.createElement('button');
+    newButtonFinish.setAttribute('class', 'finishButton');
+    newButtonFinish.setAttribute('onclick', 'results()');
+    newButtonFinish.textContent = "VER RESULTADOS";
+
+    finishScreen.appendChild(newFinishAlert);
+    finishScreen.appendChild(newButtonFinish);
+}
+
 var timerOn = true;
 var time = 900;
 
@@ -29,6 +51,8 @@ function timedCount() {
     if (time == -1) {
         timerOn = 0;
         timer.innerHTML = "TEMPO<br>ESGOTADO"
+        timeOutAudio.play();
+        finishGame(0);
     } else {
         timer.innerHTML = `TEMPO <br>${fmtMSS(time)}`;
         time--;
@@ -72,10 +96,14 @@ function skipQuestion(element) {
         questoesAntigas[o].style.display = 'none';
     }
 
-    questions.shift();
-    novaQuestao = document.getElementsByClassName(questions[0]['id'].toString());
-    for (n = 0; n <= (novaQuestao.length - 1); n++) {
-        novaQuestao[n].style.display = "";
+    try {
+        questions.shift();
+        novaQuestao = document.getElementsByClassName(questions[0]['id'].toString());
+        for (n = 0; n <= (novaQuestao.length - 1); n++) {
+            novaQuestao[n].style.display = "";
+        }
+    } catch {
+        finishGame(1);
     }
 }
 
@@ -84,7 +112,7 @@ function reviewQuestion(element) {
     for (m = 0; m <= (array_disable.length - 1); m++) {
         array_disable[m].disabled = true;
     }
-    array_disable[array_disable.length-1].disabled = false;
+    array_disable[array_disable.length - 1].disabled = false;
 
     for (l = 0; l <= (questions.length - 1); l++) {
         if (element.id == questions[l]['id']) {
@@ -97,7 +125,7 @@ function reviewQuestion(element) {
                 errorAudio.play();
                 element.style.backgroundColor = "red";
                 btns = document.getElementsByClassName(element.id.toString());
-                for(p = 0; p <= (btns.length - 1); p++){
+                for (p = 0; p <= (btns.length - 1); p++) {
                     if (questions[l]['resp'] == btns[p].textContent) {
                         btns[p].style.backgroundColor = "green";
                         btns[p].style.opacity = "0.4";
@@ -146,7 +174,7 @@ function question() {
         newButtonContinue.setAttribute('disabled', 'true');
         newButtonContinue.textContent = "CONTINUAR";
 
-        if(i != 0){
+        if (i != 0) {
             newButtonContinue.setAttribute('style', 'display: none');
         }
         continueButton.appendChild(newButtonContinue);
