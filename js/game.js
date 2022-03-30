@@ -1,3 +1,6 @@
+ptsAC = ptsAl = ptsPI = ptsTI = ptsBD = ptsLvl1 = ptsLvl2 = ptsLvl3 = ptsLvl4 = ptsLvl5 = 0;
+
+
 function choose(obj) {
     selectAudio.play();
     cardsBox.style.display = "none";
@@ -19,7 +22,7 @@ function choiceOther() {
 }
 
 function finishGame(status) {
-    finishAudio.play();
+    themeAudio.play();
     questionScreen.style.display = "none";
     newFinishAlert = document.createElement('span');
     newFinishAlert.setAttribute('class', 'finishAlert');
@@ -121,6 +124,11 @@ function reviewQuestion(element) {
                 element.style.backgroundColor = "green";
                 pontos += questions[l]['level'] * 25;
                 points.innerHTML = pontos;
+                ptsAC += (questions[l]['mat'] == materias[0]) ? 1 : 0;
+                ptsAl += (questions[l]['mat'] == materias[1]) ? 1 : 0;
+                ptsPI += (questions[l]['mat'] == materias[2]) ? 1 : 0;
+                ptsTI += (questions[l]['mat'] == materias[3]) ? 1 : 0;
+                ptsBD += (questions[l]['mat'] == materias[4]) ? 1 : 0;
             } else {
                 errorAudio.play();
                 element.style.backgroundColor = "red";

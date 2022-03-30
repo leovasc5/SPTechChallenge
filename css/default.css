@@ -34,6 +34,10 @@ body{
     color: #63B1BD;
 }
 
+#foobar{
+    display: none;
+}
+
 ::-webkit-scrollbar-track {
     background-color: #1F2B45;
 }
