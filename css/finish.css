@@ -25,3 +25,23 @@
 .finishButton:hover{
     opacity: 0.4;
 }
+
+.resultScreen{
+    display: table;
+    margin: 0 auto;
+}
+
+.resultScreen h2{
+    margin: 32px 32px 8px 32px;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+    background-color: #1F2B45;
+    color: #fff;
+}
+
+.labelView{
+    display: table;
+    margin: 0 auto;
+    color: #554b4b
+}

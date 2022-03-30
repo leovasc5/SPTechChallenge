@@ -86,6 +86,14 @@
 
     <div id="finishScreen">
     </div>
+
+    <div class="resultScreen" id="resultScreen" style="display: none;">
+        <h2>VOCÊ FEZ <span id="resultadoPts"></span> PONTOS!</h2>
+        <span class="labelView">VEJA ABAIXO OS SEUS RESULTADOS</span>
+        <div class="PointsCharts">
+            <canvas id="myChart" style="width:100%;max-width:600px;display: table;margin: 0 auto;"></canvas>
+        </div>
+    </div>
     <audio id="foobar" src="assets/audios/finish.wav" preload="auto"> 
 </body>
 </html>
@@ -95,7 +103,7 @@
 <script src="js/audios.js" type="text/javascript"></script>
 <script src="js/game.js" type="text/javascript"></script>
 <script src="js/index.js" type="text/javascript"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <!-- Criado por: LEONARDO VASCONCELOS PAULINO
 GitHub: https://github.com/leovasc5/CSVtoMongoDB
 Instagram: https://www.instagram.com/leovasc5 -->

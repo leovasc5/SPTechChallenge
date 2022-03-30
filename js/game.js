@@ -1,6 +1,5 @@
 ptsAC = ptsAl = ptsPI = ptsTI = ptsBD = ptsLvl1 = ptsLvl2 = ptsLvl3 = ptsLvl4 = ptsLvl5 = 0;
 
-
 function choose(obj) {
     selectAudio.play();
     cardsBox.style.display = "none";
@@ -19,6 +18,35 @@ function choiceOther() {
     errorAudio.play();
     cardsBox.style.display = "block";
     startGame.style.display = "none";
+}
+
+function results() {
+    finishScreen.style.display = 'none';
+    resultScreen.style.display = 'block';
+
+    resultadoPts.innerHTML = pontos;
+    var xValues = ["Arq. Comp.", "Algoritmos", "PI", "TI", "Banco de Dados"];
+    var yValues = [ptsAC, ptsAl, ptsPI, ptsTI, ptsBD];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "#000",
+                borderColor: "#000",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            scales: {
+                yAxes: [{ ticks: { min: 0, max: 5 } }],
+            }
+        }
+    });
 }
 
 function finishGame(status) {
@@ -129,6 +157,12 @@ function reviewQuestion(element) {
                 ptsPI += (questions[l]['mat'] == materias[2]) ? 1 : 0;
                 ptsTI += (questions[l]['mat'] == materias[3]) ? 1 : 0;
                 ptsBD += (questions[l]['mat'] == materias[4]) ? 1 : 0;
+
+                ptsLvl1 += (questions[l]['level'] == 1) ? 1 : 0;
+                ptsLvl2 += (questions[l]['level'] == 2) ? 2 : 0;
+                ptsLvl3 += (questions[l]['level'] == 3) ? 3 : 0;
+                ptsLvl4 += (questions[l]['level'] == 4) ? 4 : 0;
+                ptsLvl5 += (questions[l]['level'] == 5) ? 5 : 0;
             } else {
                 errorAudio.play();
                 element.style.backgroundColor = "red";
